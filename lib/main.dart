@@ -28,6 +28,11 @@ class HomeActivity extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
+    ButtonStyle buttonStyle = ElevatedButton.styleFrom(
+      minimumSize: Size(double.infinity, 60),
+      backgroundColor: Colors.indigo,
+      foregroundColor: Colors.white,
+    );
    return Scaffold(
      appBar: AppBar(title: Text("MY app", style: TextStyle(
        color: Colors.white, // Text color set to white
@@ -115,7 +120,15 @@ class HomeActivity extends StatelessWidget{
        ),
 
      ),
-     body: Text("hello wrold"),
+     body: Column(
+       children: [
+         Padding(padding: EdgeInsets.all(10), child:TextField(decoration: InputDecoration(border: OutlineInputBorder(), labelText:"frist Name"),)),
+         Padding(padding: EdgeInsets.all(10), child:TextField(decoration: InputDecoration(border: OutlineInputBorder(), labelText:"Last Name"),)),
+         Padding(padding: EdgeInsets.all(10), child:TextField(decoration: InputDecoration(border: OutlineInputBorder(), labelText:"email"),)),
+         Padding(padding: EdgeInsets.all(10), child:TextField(decoration: InputDecoration(border: OutlineInputBorder(), labelText:"Password"),)),
+         Padding(padding: EdgeInsets.all(10), child:ElevatedButton(onPressed: (){}, child: Text("Submit"), style: buttonStyle,))
+       ],
+     )
    );
   }
 
