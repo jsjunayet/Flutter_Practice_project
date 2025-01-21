@@ -74,6 +74,47 @@ class HomeActivity extends StatelessWidget{
        },
 
      ),
+     drawer: Drawer(
+       backgroundColor: Colors.white,
+       child: ListView(
+         children: [
+           DrawerHeader(
+             padding: EdgeInsets.all(0),
+               child:UserAccountsDrawerHeader(
+             decoration: BoxDecoration(color: Colors.indigo),
+               accountName: Text("Junayet Shiblu"),
+               accountEmail: Text("junayetshiblu0@gmail.com"),
+                 currentAccountPicture: CircleAvatar(
+                   backgroundImage: NetworkImage("https://i.ibb.co.com/5Ymn1Z9/IMG-1168.jpg"),
+
+                 )
+           )
+           ),
+           ListTile(
+             leading: Icon(Icons.home),
+             title: Text("Home"),
+             onTap: (){
+               MySnackBar("home page", context);
+             },
+           ),
+           ListTile(
+             leading: Icon(Icons.login),
+             title: Text("Login"),
+             onTap: (){
+               MySnackBar("Login page", context);
+             },
+           ),
+           ListTile(
+             leading: Icon(Icons.sign_language_sharp),
+             title: Text("Register"),
+             onTap: (){
+               MySnackBar("Register page", context);
+             },
+           ),
+         ],
+       ),
+
+     ),
      body: Text("hello wrold"),
    );
   }
