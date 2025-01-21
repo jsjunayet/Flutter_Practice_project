@@ -122,13 +122,84 @@ class HomeActivity extends StatelessWidget{
      ),
      body: Column(
        children: [
-         Padding(padding: EdgeInsets.all(10), child:TextField(decoration: InputDecoration(border: OutlineInputBorder(), labelText:"frist Name"),)),
-         Padding(padding: EdgeInsets.all(10), child:TextField(decoration: InputDecoration(border: OutlineInputBorder(), labelText:"Last Name"),)),
-         Padding(padding: EdgeInsets.all(10), child:TextField(decoration: InputDecoration(border: OutlineInputBorder(), labelText:"email"),)),
-         Padding(padding: EdgeInsets.all(10), child:TextField(decoration: InputDecoration(border: OutlineInputBorder(), labelText:"Password"),)),
-         Padding(padding: EdgeInsets.all(10), child:ElevatedButton(onPressed: (){}, child: Text("Submit"), style: buttonStyle,))
+         Padding(
+           padding: EdgeInsets.all(10),
+           child: TextField(
+             decoration: InputDecoration(
+               border: OutlineInputBorder(),
+               labelText: "First Name",
+             ),
+           ),
+         ),
+         Padding(
+           padding: EdgeInsets.all(10),
+           child: TextField(
+             decoration: InputDecoration(
+               border: OutlineInputBorder(),
+               labelText: "Last Name",
+             ),
+           ),
+         ),
+         Padding(
+           padding: EdgeInsets.all(10),
+           child: TextField(
+             decoration: InputDecoration(
+               border: OutlineInputBorder(),
+               labelText: "Email",
+             ),
+           ),
+         ),
+         Padding(
+           padding: EdgeInsets.all(10),
+           child: TextField(
+             decoration: InputDecoration(
+               border: OutlineInputBorder(),
+               labelText: "Password",
+             ),
+           ),
+         ),
+         Padding(
+           padding: EdgeInsets.all(10),
+           child: ElevatedButton(
+             onPressed: () {},
+             child: Text("Submit"),
+             style: buttonStyle,
+           ),
+         ),
+         Padding(
+           padding: EdgeInsets.symmetric(vertical: 20), // Add spacing above the Row
+           child: Row(
+             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+             children: [
+               Container(
+                 height: 100,
+                 width: 100,
+                 child: Image.network(
+                   "https://i.ibb.co/5Ymn1Z9/IMG-1168.jpg",
+                   fit: BoxFit.cover,
+                 ),
+               ),
+               Container(
+                 height: 100,
+                 width: 100,
+                 child: Image.network(
+                   "https://i.ibb.co/5Ymn1Z9/IMG-1168.jpg",
+                   fit: BoxFit.cover,
+                 ),
+               ),
+               Container(
+                 height: 100,
+                 width: 100,
+                 child: Image.network(
+                   "https://i.ibb.co/5Ymn1Z9/IMG-1168.jpg",
+                   fit: BoxFit.cover,
+                 ),
+               ),
+             ],
+           ),
+         ),
        ],
-     )
+     ),
    );
   }
 
