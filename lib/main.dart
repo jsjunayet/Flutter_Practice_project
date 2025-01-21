@@ -53,6 +53,27 @@ class HomeActivity extends StatelessWidget{
          MySnackBar("this is added botton", context);
        },
      ),
+     bottomNavigationBar: BottomNavigationBar(
+       currentIndex: 2,
+       items: [
+         BottomNavigationBarItem(icon: Icon(Icons.home),label: "Home"),
+         BottomNavigationBarItem(icon: Icon(Icons.info),label: "About"),
+         BottomNavigationBarItem(icon: Icon(Icons.person),label: "Profile")
+
+       ],
+       onTap: (int index){
+         if(index==0){
+           MySnackBar("Home page", context);
+         }
+         if(index==1){
+           MySnackBar("About page", context);
+         }
+         if(index==2){
+           MySnackBar("Profile page", context);
+         }
+       },
+
+     ),
      body: Text("hello wrold"),
    );
   }
